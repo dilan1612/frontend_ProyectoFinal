@@ -1,0 +1,88 @@
+/* login.css */
+
+/* Fondo animado con gradiente */
+body {
+  background: linear-gradient(135deg, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 100%);
+  --tw-gradient-from: #dbeafe; /* gradient-start */
+  --tw-gradient-to: #93fd9f;   /* gradient-end */
+  animation: gradient-animation 6s ease infinite;
+}
+
+/* Animación de fondo */
+@keyframes gradient-animation {
+  0% {
+    --tw-gradient-from: #dbeafe;
+    --tw-gradient-to: #93c5fd;
+  }
+  50% {
+    --tw-gradient-from: #93c5fd;
+    --tw-gradient-to: #2563eb;
+  }
+  100% {
+    --tw-gradient-from: #dbeafe;
+    --tw-gradient-to: #93c5fd;
+  }
+}
+
+/* Contenedor del formulario */
+.login-container {
+  background-color: #ffffff;
+  box-shadow: var(--tw-shadow-card);
+  border-radius: var(--tw-border-radius-card);
+  padding: 2rem;
+  max-width: 24rem;
+  margin: 0 auto;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.login-container:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--tw-shadow-button-hover);
+}
+
+/* Botón de inicio de sesión */
+.login-button {
+  background-color: var(--tw-color-primary);
+  color: #ffffff;
+  border-radius: var(--tw-border-radius-button);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: var(--tw-color-primary-dark);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: var(--tw-shadow-button-hover);
+}
+
+/* Campos de entrada */
+.login-input {
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: var(--tw-border-radius-input);
+  padding: 0.75rem;
+  transition: border-color 0.3s ease;
+}
+
+.full-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.login-input:focus {
+  border-color: var(--tw-color-secondary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Enlaces */
+.login-link {
+  color: var(--tw-color-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: var(--tw-color-secondary-dark);
+  text-decoration: underline;
+}
